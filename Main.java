@@ -1,16 +1,33 @@
-package constructoroverload;
+package single_inheritance;
 
-public class Main
-{
-     public static void main(String[] args) 
-	{
-		Book obj1= new Book();//default constructor
-		Book obj2 = new Book(1,"Let us c","Y.P.Kanetkar",250.0f);
-	    Book obj3 = new Book(obj2);
+import java.util.Scanner;
 
-	obj1.dispBook();
-	obj2.dispBook();
-	obj3.dispBook();
-    }
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String name;
+		int age, rollno;
+		float per;
+		
+		System.out.println("Enter Student Details: ");
+		System.out.println("Enter Name: ");
+		name = sc.next();
+		
+		System.out.println("Enter Age: ");
+		age=sc.nextInt();
+		
+		System.out.println("Enter Roll No: ");
+		rollno=sc.nextInt();
+		
+	    System.out.println("Enter Persent: ");
+	    per = sc.nextFloat();
+	    
+	    Student obj = new Student(name,age,rollno,per);
+	    
+	    obj.dispPerson();
+	    obj.dispStudent();
+
+	}
 
 }

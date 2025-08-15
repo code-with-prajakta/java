@@ -1,22 +1,24 @@
-package hierarchical_inheritance;
+package metho_overloading;
 
 public class Shape {
-	String name;
-	int side;
-	
-	public Shape(String name,int side)
-	{
-		this.name=name;
-		this.side=side;
-	}
-	
-	public void dispShape()
-	{
-		System.out.println("Name = "+name);
-		System.out.println("Sides = "+side);
-		
-	}
-	
-	
 
-}
+	
+		
+		float area(float r)
+		{
+			float result = 3.14f*r*r;
+			return result;
+		}
+		int area(int s)
+		{
+			int r= s*s;
+			return r;
+		}
+		int area(int l,int b)
+		{
+			int rs= l*b;
+			return rs;
+		}
+	}
+
+

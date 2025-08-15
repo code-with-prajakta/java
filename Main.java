@@ -1,33 +1,24 @@
-package single_inheritance;
-
-import java.util.Scanner;
+package second;
+import first.DerivedOne;
+import first.NonDerivedOne;
 
 public class Main {
-
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		String name;
-		int age, rollno;
-		float per;
+      public static void main(String[] args) {
+    	  
+    	  DerivedOne d1 = new DerivedOne();
+    	  d1.dispBase();
+    	  d1.dispDerivedOne();
+    	  
+    	  NonDerivedOne n1 =new NonDerivedOne();
+    	  n1.dispNonDerivedOne();
+    	  
+    	  System.out.println("=========================");
+    	  DerivedTwo d2 = new DerivedTwo();
+    	  d2.dispDerivedTwo();
+    	  
+    	  NonDerivedTwo n2 = new NonDerivedTwo();
+    	 n2.dispBase();
 		
-		System.out.println("Enter Student Details: ");
-		System.out.println("Enter Name: ");
-		name = sc.next();
-		
-		System.out.println("Enter Age: ");
-		age=sc.nextInt();
-		
-		System.out.println("Enter Roll No: ");
-		rollno=sc.nextInt();
-		
-	    System.out.println("Enter Persent: ");
-	    per = sc.nextFloat();
-	    
-	    Student obj = new Student(name,age,rollno,per);
-	    
-	    obj.dispPerson();
-	    obj.dispStudent();
-
 	}
 
 }

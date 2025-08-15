@@ -1,24 +1,14 @@
-package second;
-import first.DerivedOne;
-import first.NonDerivedOne;
+package variable_argument;
 
 public class Main {
-      public static void main(String[] args) {
-    	  
-    	  DerivedOne d1 = new DerivedOne();
-    	  d1.dispBase();
-    	  d1.dispDerivedOne();
-    	  
-    	  NonDerivedOne n1 =new NonDerivedOne();
-    	  n1.dispNonDerivedOne();
-    	  
-    	  System.out.println("=========================");
-    	  DerivedTwo d2 = new DerivedTwo();
-    	  d2.dispDerivedTwo();
-    	  
-    	  NonDerivedTwo n2 = new NonDerivedTwo();
-    	 n2.dispBase();
+
+	public static void main(String[] args) {
+		Calculate c1= new Calculate();
+		System.out.println(c1.dosum(5,6,7));
+		System.out.println(c1.dosum(5,6,7,8));
+		System.out.println(c1.dosum(5,6,7,8,9));
 		
 	}
 
 }
+
